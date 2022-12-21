@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+.main{
+    min-width: 380px;
+    
+}
+.title{
+    text-align: center;
+    flex: 100%;
+}
+
+.content {
+    border:4px solid lightgray;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgba(0, 147, 237, 0.2);
+}
+
+.calendarContainer{
+    font-family: 'Chivo Mono', monospace;
+    
+}
+
+.holiday{
+    color: #f4a261;
+}
+
+.race{
+    color: #70e000 ;
+}
+
+.months{
+    display: grid;
+    flex-direction: row;
+    padding: 5px;
+    gap: 5px;
+    margin-right: 5px;
+    grid-template-columns: 25% 25% 25% 25%;
+    
+}
+
+.monthTitle{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.month{
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: calc(min(100%, 1400px));
+    flex: 25%;
+    background-color: white;
+    
+}
+
+
+.daysOfWeek, .daysContainer {
+    color: gray;
+    display: grid;
+    margin: 10px;
+grid-template-columns: repeat(7,1fr);
+}
+
+@media screen and (max-width: 1000px) {
+    
+
+    
+    .months{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .month{
+        border: 1px solid gray;
+        width: calc(min(100%, 1400px));
+        
+        flex: 50%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .months{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .month{
+        border: 1px solid gray;
+        width: calc(min(100%, 300px));
+        
+        flex: 100%;
+    }
+}

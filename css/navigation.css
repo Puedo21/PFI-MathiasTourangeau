@@ -1,0 +1,77 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.menus {
+    position: fixed;
+    top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    background-color: #011627;
+    color: white;
+    height: 70px;
+    width: calc(min(100%, 1400px));
+    border-radius:20px;
+    
+}
+
+.icon {
+    font-size:28px !important;
+    cursor: pointer;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color: white;
+    
+}
+
+.menuText {
+    font-size: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 35px auto;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Mukta', sans-serif;
+
+
+}
+
+
+.menu:hover,
+.menu:hover .icon {
+    color: #94FFB9;
+    -webkit-text-fill-color: #94FFB9;
+}
+
+.menu:active,
+.menu:active .icon {
+    color: #EAC10A;
+    -webkit-text-fill-color: #EAC10A;
+}
+
+.selected,
+.selected .icon {
+    color: #EAC10A;
+    -webkit-text-fill-color: #EAC10A;
+}
+
+.menuBuffer {
+    height: 80px;
+}
+
+@media screen and (min-width:900px) {
+    .menuText {
+        display: block;
+    }
+}
